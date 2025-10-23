@@ -23,10 +23,11 @@ int main()
     cout << "Enter u: ";
     cin >> u;
 
-    cout << "Test will delete later" << endl;
 
     cout << "Enter dv: ";
     cin >> dv;
+
+    cout << "enter" << endl;
 
     //handeling simple case//
 
