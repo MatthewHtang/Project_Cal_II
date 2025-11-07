@@ -49,6 +49,7 @@ def trig_ratios(sin_power, cos_power):
 
     return
 
+output =  trig_ratios(1, 4)
 
 print(trig_ratios(1,4))
 print(trig_ratios(2,1))

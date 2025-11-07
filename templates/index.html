@@ -6,25 +6,38 @@
         </title>
     </head>
 
-    <body bgcolor = 093042>
+    <body bgcolor = 9ECFDA>
 
         <h1>
-            Calculator
+            Integral Calculator
         </h1>
 
         <h3>
             Find relief for your integral problems.
-
             
         </h3>
-        <form method = 'POST' action="/check">
-            <input type = 'text' name = 'user_input' placeholder = "Enter input" required>
-            <button type = "submit"> Run </button>
 
+        <h2>
+            Integration By Parts
+        </h2>
+        <form method = 'POST' action="/IntByParts">
+            <input type = 'text' name = 'u' placeholder = "Enter u" required>
+            <input type = 'text' name = 'dv' placeholder = "Enter dv" required>
+            <button type = "submit"> Run </button>
 
         </form>
 
+        <h2>
+            Trignometric Substition
+        </h2>
+        <form method = 'POST' action = "/IntByTrig">
+
+            <Input type = "text" name = "input_int_by_trig" placeholder = "sinx cosx" required>
+            <button type = "submit"> Run </button>
+        </form>
+
     </body>
+
 
 
 </html>
