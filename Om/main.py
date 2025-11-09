@@ -33,6 +33,32 @@ def trig_ratios(sin_power, cos_power):
 
             return f"{ans_sign} cos^{ans_cos_pow} x / {ans_cos_pow}" 
         
+        else:
+            if sin_power == 3:
+                rem_pow = sin_power - 2
+
+
+            else:
+                rem_pow = sin_power  - 3 
+
+            # power is in terms of a now we need to add the power 2 because as u^2 == a , supposed noe reversed
+            obj1 = algebric_expansion(rem_pow)
+
+            #  theis class returns a [coff, a, power] og a+1^ n
+            res_list = obj1.final_output()
+            output = "  "
+
+            for i  in range(len(res_list)):
+                
+                #  as derivative of cosx giges -sinx we need to multiply the coff by -1 to get the final output
+                res_list[i][0] *= -1
+
+                res_list[i][2] = res_list[i][2] * 2 + cos_power
+
+                #  add ing +1 to power as integral add +1 to the power
+                output += " (" + str(res_list[i][0] ) + " cos^" + str(res_list[i][2] + 1) + " (x))/ " + str((res_list[i][2] + 1)) + " + "
+            return output + " C."
+        
     
     # if power of cos is odd
     if cos_power %2 == 1:
@@ -44,6 +70,32 @@ def trig_ratios(sin_power, cos_power):
             ans_sin_pow = sin_power + 1
 
             return f" sin^{ans_sin_pow} x / {ans_sin_pow}"
+        
+        else:
+            if cos_power == 3:
+                rem_pow = cos_power - 2
+
+
+            else:
+                rem_pow = cos_power  - 3 
+
+            # power is in terms of a now we need to add the power 2 because as u^2 == a , supposed noe reversed
+            obj1 = algebric_expansion(rem_pow)
+
+            #  theis class returns a [coff, a, power] og a+1^ n
+            res_list = obj1.final_output()
+            output = "  "
+
+            for i  in range(len(res_list)):
+                
+                #  as derivative of cosx giges -sinx we need to multiply the coff by 1 to get the final output
+                
+
+                res_list[i][2] = res_list[i][2] * 2 + sin_power
+
+                #  add ing +1 to power as integral add +1 to the power
+                output += " (" + str(res_list[i][0] ) + " sin^" + str(res_list[i][2] + 1) + " (x))/ " + str((res_list[i][2] + 1)) + " + "
+            return output + " C."
 
 
 
@@ -109,14 +161,14 @@ for the cofficients of each term we need pascals triangle
 
 
 
-output =  trig_ratios(1, 4)
+# output =  trig_ratios(1, 4)
 
-# print(trig_ratios(1,4))
+# print(trig_ratios(1,1))
 # print(trig_ratios(2,1))
 
-obj1 = algebric_expansion(8)
-result = obj1.final_output()
-print(result)
+# obj1 = algebric_expansion(8)
+# result = obj1.final_output()
+# print(result)
 
 
 '''
