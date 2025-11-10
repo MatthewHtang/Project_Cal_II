@@ -112,26 +112,46 @@ string findIntegral(string dv)
 
 
 }
+string findSecondIntegral(string v, string du)
+{
+    string term = v + "*" + du;
 
+    // Handle common simple cases manually
+    if (v == "sin(x)" && du == "1")
+        return "-cos(x)";
+    if (v == "-cos(x)" && du == "1")
+        return "-sin(x)";
+    if (v == "cos(x)" && du == "1")
+        return "sin(x)";
+    if (v == "e^x" && du == "1")
+        return "e^x";
 
-
+    // fallback
+    return "∫(" + term + ")dx";
+}
 
 
 int main()
 {
     string u, dv, du, v;
-    cout << "Enter a function (like x^2 or 3x^2): ";
+
+    cout << "Enter u (like x^2 or 3x^2): ";
     cin >> u;
-    cout << "Enter you dv (like cos(x), sin(3x), e^x)";
+    cout << "Enter dv (like cos(x), sin(3x), e^x): ";
     cin >> dv;
-    
+
     du = findDerivative(u);
     v = findIntegral(dv);
+    string secondPart = findSecondIntegral(v, du);
 
+    // ∫u dv = uv - ∫v du
+    string finalAnswer = "(" + u + ")*(" + v + ") - (" + secondPart + ") + C";
 
-    string finalAnswer = "(" + v + u + ") - ∫(" + v + du + ")dx";
-    cout << "Final answer = " << finalAnswer << endl;
-
+    cout << "\n---- Results ----\n";
+    cout << "u  = " << u << endl;
+    cout << "du = " << du << endl;
+    cout << "v  = " << v << endl;
+    cout << "\nFinal Answer: " << finalAnswer << endl;
 
     return 0;
 }
