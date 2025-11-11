@@ -75,7 +75,7 @@ def intbytrig():
 
     res = func1.trig_ratios(int(sin_power), int(cos_power))
     # print(inh)
-    return  res
+    return render_template("result.html", inp=inp, result=res)
 
 
 
