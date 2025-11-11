@@ -1,44 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Calculus II</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
-    <head>
-        <title>
-            Calculator
-        </title>
-    </head>
+<body>
+  <header>
+    <h1 class="title">PROJECT CALCULUS II</h1>
+  </header>
 
-    <body bgcolor = 9ECFDA>
+  <main>
+    <h2 class="subtitle">Find Relief For Your Integral Problems</h2>
 
-        <h1>
-            Integral Calculator
-        </h1>
-
-        <h3>
-            Find relief for your integral problems.
-            
-        </h3>
-
-        <h2>
-            Integration By Parts
-        </h2>
-        <form method = 'POST' action="/IntByParts">
-            <input type = 'text' name = 'u' placeholder = "Enter u" required>
-            <input type = 'text' name = 'dv' placeholder = "Enter dv" required>
-            <button type = "submit"> Run </button>
-
+    <section class="container">
+      <div class="card">
+        <h3>Integration By Parts</h3>
+        <form method="POST" action="/IntByParts">
+          <input type="text" name="u" placeholder="Enter u" required>
+          <input type="text" name="dv" placeholder="Enter dv" required>
+          <button type="submit" class="run-btn">Run</button>
         </form>
+      </div>
 
-        <h2>
-            Integrals Involving Trignometric Functions
-        </h2>
-        
-        <form method = 'POST' action = "/IntByTrig">
-
-            <Input type = "text" name = "input_int_by_trig" placeholder = "sinx cosx" required>
-            <button type = "submit"> Run </button>
+      <div class="card">
+        <h3>Integrals Involving Trigonometric Functions</h3>
+        <form method="POST" action="/IntByTrig">
+          <input type="text" name="input_int_by_trig" placeholder="sin x cos x" required>
+          <button type="submit" class="run-btn">Run</button>
         </form>
+      </div>
+    </section>
+  </main>
 
-    </body>
-
-
-
+  <footer>
+    <p>By Om Mahato & Matthew Htang</p>
+  </footer>
+</body>
 </html>
