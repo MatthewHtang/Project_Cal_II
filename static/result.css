@@ -9,6 +9,16 @@ body {
   min-height: 100vh;
   justify-content: center;
 }
+.container {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  width: 50%;          /* a bit narrower for nicer side spacing */
+  max-width: 700px;    
+  margin: 40px auto;   /* centers it + adds some vertical spacing */
+}
+
 
 h1 {
   font-size: 1.5rem;
