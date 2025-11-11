@@ -22,12 +22,16 @@ h2 {
 }
 
 pre {
-  background-color: #1e1e1e;
-  padding: 15px;
+  background-color: #2b2b2b;
+  padding: 10px;
   border-radius: 8px;
-  width: 80%;
-  overflow-x: auto;
+  max-height: 300px;    
+  overflow-y: auto;     
+  overflow-x: hidden;     
+  white-space: pre-wrap;  
+  word-wrap: break-word;  
 }
+
 
 .back-btn {
   display: inline-block;
