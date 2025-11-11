@@ -8,22 +8,24 @@
 </head>
 
 <body>
-  <header>
-    <h1>Integration Result</h1>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Integration Result</h1>
+    </header>
 
-  <main>
-    {% if inp %}
-      <h2>Your Input:</h2>
-      <pre>{{ inp }}</pre>
-    {% endif %}
+    <main>
+      {% if inp %}
+        <h2>Your Input:</h2>
+        <pre>{{ inp }}</pre>
+      {% endif %}
 
-    {% if result %}
-      <h2>Result:</h2>
-      <pre>{{ result }}</pre>
-    {% endif %}
+      {% if result %}
+        <h2>Result:</h2>
+        <pre>{{ result }}</pre>
+      {% endif %}
 
-    <a href="/" class="back-btn">← Back to Calculator</a>
-  </main>
+      <a href="/" class="back-btn">← Back to Calculator</a>
+    </main>
+  </div>
 </body>
 </html>
