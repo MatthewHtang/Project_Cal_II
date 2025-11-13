@@ -1,8 +1,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #121212;
-  color: white;
+  background-image: url("/static/images/bg2.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,8 +39,11 @@ header {
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.08); /* make it slightly more visible */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari support */
 }
+
 
 .card {
   display: flex;
@@ -64,7 +66,7 @@ form {
 }
 
 input {
-  background-color: #1e1e1e;
+  background-color: #1C222B;
   border: none;
   padding: 10px 15px;
   border-radius: 6px;
@@ -74,7 +76,7 @@ input {
 }
 
 input::placeholder {
-  color: #888;
+  color: #C7D4E3;
 }
 
 .run-btn {
