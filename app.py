@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 
 from Om import main as func1
 
+import matthew
+
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -23,8 +26,12 @@ def intbyparts():
     u = request.form.get("u")
     dv = request.form.get("dv")
 
+    inp = u + "  " + dv
+    res = matthew.Solution(u , dv)
 
-    return u + "  " + dv
+
+
+    return render_template("result.html", inp = inp, result = res)
 
 
 @app.route('/IntByTrig' , methods = ["POST"])
